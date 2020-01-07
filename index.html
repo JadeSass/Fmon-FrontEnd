@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Fmon Agro Services">
+    <meta name="description" content="An agro service, an agricultural service for farmers">
+    <link rel="stylesheet" type="text/css" media="all" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <title>Fmon - Agricultural Services</title>
+</head>
+<body>
+    <div id="app">
+    <div class="info-text grey lighten-3">
+        <div class="text-wrapper container">
+            <span class="black-text left">Nigeria's 1st Digital Agriculture Platform</span>
+        </div>
+    </div>
+    <header class="navbar-fixed">
+        <nav class="green darken-3">
+            <div class="container nav-wrapper">
+                <a href="#" class="brand-logo">Fmon</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-navicon"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FMON Farms</a></li>
+                    <li><a href="#">Loan Facility</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav green darken-3" id="mobile-demo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FMON Farms</a></li>
+            <li><a href="#">Loan Facility</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="banner-text container">
+            <h3>Earn Profits. <br>
+            Empower Farmers.</h3>
+            <p>Join the Revolution and help us achieve our <br>
+            goal of Global Food Security.</p>
+            <div class="banner-button">
+                <button class="btn white col s6 m6 l6 black-text"><i class="fa fa-play left"></i>See how Fmon Works</button>
+            </div>
+        </div>
+    </section>
+    <aside class="slide container">
+        <div class="col s12 m12 l12">
+            <div class="row">
+                <div class="col s12 m12 l3" v-for="items in cardItems">
+                    <div class="card white">
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img :src="items.imageUrl" class="pt-10 no-select" height="90px" width="50px" alt="empower">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{items.title}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </aside>
+    <article class="showcase container">
+        <div class="row">
+            <div class="title-text">
+                <h4>Start your Own Farm</h4>
+            </div>
+            <div class="col s12 m6 l3" v-for="farm in farmItems">
+                <div class="card">
+                    <div class="card-image">
+                        <img :src="farm.videoUrl" alt="farm Items">
+                        <span class="card-title">{{farm.title}}</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="list-grid">
+                            <li class="card-list"><i class="fa fa-map-marker"></i> {{farm.location}}</li>
+                            <li class="card-list"><i class="fa fa-money"></i> {{farm.amount}}</li>
+                            <li class="card-list"><i class="fa fa-line-chart"></i> {{farm.ratio}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <section class="more-services container">
+        <div class="row">
+            <div class="title-text">
+                <h4>Current Numbers</h4>
+            </div>
+            <div class="col s12 m6 l4" v-for="services in moreServices">
+                <div class="image-services center-align">
+                    <img :src="services.iconUrl" alt="image">
+                    <ul class="list-grid">
+                        <li class="card-list">
+                            <span class="card-title green-text darken-3">{{services.title}}</span>
+                            <p>{{services.text}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="official-sponsor container">
+        <div class="row">
+            <div class="title-text">
+                <h4>Happy Sponsor</h4>
+            </div>
+            <div class="col s12 m12 l4" v-for="people in sponsors">
+                <div class="card">
+                    <div class="card-image">
+                        <img :src="people.imgPath" alt="sponsor">
+                        <span class="card-title">{{people.name}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{people.about}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial container">
+        <div class="row">
+                <div class="title-text">
+                    <h4>Testimonials</h4>
+                </div>
+            <div class="col s12 m12 l12" v-for="testimony in testimonials">
+                <div class="card">
+                    <div class="card-image">
+                        <video :src="testimony.videoPath" alt="farm Testimony" controls>
+                    </div>
+                    <div class="card-content">
+                        <p>{{testimony.testimonial}}</p>
+                        <span class="card-title"><b>- Alao Quadri</b></span>
+                        <button class="btn btn-large green darken-2 white-text"><a href="#" class="white-text">See Farmers Stories</a></button>
+                    </div>
+                </div>
+        </div>
+    </section>
+</div>
+    <!-- javascript files here -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body{
+    border: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+header nav{
+    margin-top: 45px;
+}
+aside{
+    margin: 0px 0px 0px 0px;
+}
+.card .card-image video {
+    border-radius: 2px 0 0 2px;
+    max-width: 100%;
+    width: 2980px;
+  }
+.container{
+    margin:0 auto;
+    max-width:1380px;
+    width:100%;
+}
+.container-wrapper{
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+.info-text{
+    padding: 15px;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+header .sidenav li a{
+    color: white;
+}
+.pt-10{
+    padding: 10px; 
+    margin-top: 5px;
+}
+.no-select{
+    user-select: none;
+    -moz-user-select: none;
+}
+.slide{
+    margin-top: 10px;
+}
+.banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.312), rgba(0, 0, 0, 0.312)), url("../assets/img/banner-img.jpg");
+    height: 75vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: -60px;
+    background-position: center;
+    background-size: cover;
+}
+section .banner-text{
+    padding-top: 50px;
+}
+section .banner-text h3{
+    margin: 7rem 0px 2rem 0px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+section .banner-text p{
+    font-size: 18px;
+    color: whitesmoke;
+}
+section .banner-text .banner-button{
+    margin: 3rem 0px 0px 0px;
+}
+.more-services img{
+    height: 60px;
+    width: 60px;
+}
+.more-services .list-grid span{
+    font-size: 16px;
+    font-weight: bold;
+}
+.image-services{
+    padding-bottom: 20px;
+}
+.testimonial .card{
+    display: inline-flex;
+}
+
+/* Media at 320 and 533 */
+@media screen and (max-width: 320px){
+    section{
+        background: linear-gradient(rgba(0, 0, 0, 0.312), rgba(0, 0, 0, 0.312)), url("../assets/img/banner-img.jpg");
+        height: 90vh;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -20;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    section .banner-text h3{
+        margin: 5rem 0px 2rem 0px;
+        color: whitesmoke;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    section .banner-text p{
+        font-size: 15px;
+        color: whitesmoke;
+    }
+}
+/* Media at 840 and 980 */
+@media screen and (max-width: 840px){
+    .testimonial .card{
+        display: inline-block;
+    }
+}
